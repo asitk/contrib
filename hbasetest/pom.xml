@@ -1,0 +1,109 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.hbasetest.core</groupId>
+  <artifactId>hbasetest</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>hbasetest</name>
+  <url>http://maven.apache.org</url>
+  
+  <repositories>
+    <repository>
+      <id>mvn-public</id>
+      <name>MVNRepository</name>
+      <url>http://mvnrepository.com</url>
+    </repository>
+  </repositories>
+  
+  <properties>
+	<jdk.version>1.6</jdk.version>
+  </properties>
+    
+  <dependencies>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-cli</groupId>
+      <artifactId>commons-cli</artifactId>
+      <version>1.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.zookeeper</groupId>
+      <artifactId>zookeeper</artifactId>
+      <version>3.4.6</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+		<groupId>org.apache.hadoop</groupId>
+		<artifactId>hadoop-core</artifactId>
+		<version>1.2.1</version>
+	</dependency>
+  	<dependency>
+		<groupId>org.apache.hadoop</groupId>
+		<artifactId>hadoop-common</artifactId>
+		<version>0.22.0</version>
+	</dependency>
+  	<dependency>
+		<groupId>org.apache.hadoop</groupId>
+		<artifactId>hadoop-tools</artifactId>
+		<version>1.2.1</version>
+	</dependency>
+  	<dependency>
+		<groupId>org.apache.hadoop</groupId>
+		<artifactId>hadoop-hdfs</artifactId>
+		<version>0.22.0</version>
+	</dependency>
+	<dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase</artifactId>
+            <version>0.94.14</version>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering> 
+        </resource>
+    </resources>
+    		
+    <plugins>
+	    <plugin>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>2.3.2</version>
+			<configuration>
+				<source>1.6</source>
+				<target>1.6</target>
+			</configuration>
+		</plugin>
+		
+       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>appassembler-maven-plugin</artifactId>
+        <version>1.8.1</version>
+        <configuration>
+          <programs>
+            <program>
+              <mainClass>com.hbasetest.core.App</mainClass>
+              <id>hbasetest</id>
+            </program>
+          </programs>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>
