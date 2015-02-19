@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Status App</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="button_tweet">Tweet</string>
+    <string name="hint_status">What\'s goin on</string>
+    <string name="maxChars">140</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="apiroot">ApiRoot</string>
+    <string name="username_title">Username</string>
+    <string name="username_summary">Please Enter a Username</string>
+    <string name="password_title">Password</string>
+    <string name="title_activity_main">Main Activity</string>
+    <string name="tweet">Tweet</string>
+    <string name="refresh">Refresh</string>
+    <string name="purge">Purge</string>
+    <string name="refresh_title">Refresh Interval</string>
+    <string name="refresh_summary">How soon should the app refresh?</string>
+
+</resources>
